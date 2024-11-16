@@ -12,6 +12,8 @@
 .menu-img {
   max-height: 45vh;
   object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .menu-title {
@@ -30,6 +32,8 @@
 .content {
   margin: 50px;
   padding: 20px;
+}
+.content p {
   text-align: justify;
 }
 .menu-description {
@@ -39,9 +43,8 @@
   align-items: center;
   gap: 30px;
 }
-.img-recipe,
-.img-cookinginfo {
-  max-width: 50vw;
+.img-recipe {
+  max-width: 30vw;
 }
 
 .menu-separator {
@@ -53,6 +56,7 @@ h3 {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-align: left;
 }
 ul {
   list-style: none;
@@ -73,8 +77,61 @@ ul li {
   top: 50%;
   transform: translate(-50%);
   margin-top: 30px;
+  max-width: 30vw;
 }
 
 .directions-content p {
   margin: 10px 0px;
+}
+@media (min-width: 1024px) {
+  .content {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .menu-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .menu-ingredients {
+    align-self: flex-start;
+    width: 100%;
+  }
+  .cooking-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .img-cookinginfo {
+    position: static;
+    transform: none;
+    max-width: 30vw;
+    min-width: 20vw;
+    margin-top: 30px;
+  }
+
+  .menu-separator {
+    border: 1px solid #aba2a2;
+    margin: 30px 0px;
+    width: 100%;
+  }
+
+  .directions {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu-description .menu-ingredients {
+    width: 100%;
+  }
+
+  .img-recipe .img-cookinginfo {
+    width: 100%;
+  }
 }
